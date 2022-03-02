@@ -23,7 +23,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.[chunkhash].js',
     clean: true,
-    path: resolve(__dirname, "./dist"),
+    path: resolve(__dirname, "./build"),
     environment: {
       arrowFunction: false,
     }
