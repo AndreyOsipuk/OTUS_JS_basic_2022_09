@@ -33,7 +33,7 @@ export const App: FC = () => {
         </>
       )}
       {arr.map((item, idx) => (
-        <p key={idx}>{item}</p>
+        <ButtonClass key={idx} />
       ))}
     </>
   );

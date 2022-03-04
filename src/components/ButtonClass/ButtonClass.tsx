@@ -5,10 +5,7 @@ interface ButtonClassState {
   value: number;
 }
 
-export class ButtonClass extends Component<
-  Record<string, never>,
-  ButtonClassState
-> {
+export class ButtonClass extends Component<{}, ButtonClassState> {
   state = {
     name: 'react',
     value: 0,
