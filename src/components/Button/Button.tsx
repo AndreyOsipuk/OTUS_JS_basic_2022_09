@@ -17,9 +17,7 @@ export const Button: FC<ButtonProps> = ({
     <button
       onClick={onButtonClick}
       disabled={disabled}
-      // style={{ backgroundColor: 'green' }}
       className={style.button}
-      // className="button"
     >
       {label}
     </button>
