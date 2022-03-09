@@ -1,15 +1,10 @@
 import React, { FC, useState } from 'react';
-import { Button } from './components/Button';
-import { ButtonClass } from './components/ButtonClass/ButtonClass';
-import { Input } from './components/Input';
+import { ClassComponent } from './components/ClassComponent';
+import { MemoComponent } from './components/FuncComponent/FuncComponent';
 
 export const App: FC = () => {
   const [show, setShow] = useState(true);
-  const [arr] = useState(['otus', 'react', 'forever']);
-
-  const handleClick = (name: string) => {
-    console.log(name);
-  };
+  const [count, setCount] = useState(1);
 
   const toggleShow = () => {
     setShow((prevShow) => !prevShow);
@@ -17,24 +12,14 @@ export const App: FC = () => {
 
   return (
     <>
-      <h2>hello otus</h2>
+      <h2>Parect component</h2>
       <button onClick={toggleShow}>{show ? 'close' : 'open'}</button>
+      <br />
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>click</button>
       <hr />
-      {show && (
-        <>
-          <ButtonClass />
-          <br />
-          <Button label="submit" onButtonClick={() => handleClick('submit')} />
-          <br />
-          <Button label="cancel" onButtonClick={() => handleClick('cancel')} />
-          <br />
-          <Input />
-          <br />
-        </>
-      )}
-      {arr.map((item, idx) => (
-        <ButtonClass key={idx} />
-      ))}
+      <MemoComponent count={count} />
+      {/* <ClassComponent count={count} /> */}
     </>
   );
 };

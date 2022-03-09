@@ -17,7 +17,7 @@ export const Button: FC<ButtonProps> = ({
     <button
       onClick={onButtonClick}
       disabled={disabled}
-      className={style.button}
+      // className={style.button}
     >
       {label}
     </button>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-interface ButtonClassState {
+interface ButtonState {
   name: string;
   value: number;
 }
 
-export class ButtonClass extends Component<{}, ButtonClassState> {
+export class Button extends Component<{}, ButtonState> {
   state = {
     name: 'react',
     value: 0,
@@ -20,16 +20,13 @@ export class ButtonClass extends Component<{}, ButtonClassState> {
     // this.setState({ value: 2 });
   };
 
-  componentDidUpdate() {
-    console.log('update');
-  }
+  // componentDidUpdate() {
+  //   console.log('update');
+  // }
 
   render() {
     return (
       <>
-        {this.state.name}
-        <br />
-        <input type="text" onChange={this.handleChage} />
         <button onClick={this.handleClick}>click</button>
       </>
     );

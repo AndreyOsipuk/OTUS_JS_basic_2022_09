@@ -1,0 +1,1 @@
+export { FuncComponent } from './FuncComponent';
